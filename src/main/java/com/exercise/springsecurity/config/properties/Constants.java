@@ -7,4 +7,5 @@ public class Constants {
     public static final String ADMIN_USERNAME = "admin";
     public static final String USER_PASSWORD = "user_password";
     public static final String ADMIN_PASSWORD = "admin_password";
+    public static final String HEADER_AUTHORIZATION = "Authorization";
 }
