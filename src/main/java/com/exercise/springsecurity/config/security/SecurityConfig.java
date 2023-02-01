@@ -17,6 +17,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import java.security.PublicKey;
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -47,7 +49,7 @@ public class SecurityConfig {
                     .requestMatchers("/product", "/user/test-user", "/user/auth").permitAll()
                 .and()
                     .authorizeHttpRequests()
-                    .requestMatchers("/product/**").authenticated()
+                    .anyRequest().authenticated()//requestMatchers("/product/**").authenticated()
                 .and()
 //                .formLogin()
 //                .and()
